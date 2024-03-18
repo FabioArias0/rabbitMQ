@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  rabbitmq:
+    image: rabbitmq:3.8-management
+    ports:
+      - "5672:5672"  # Puerto de RabbitMQ
+      - "15672:15672"  # Interfaz de gestión
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq
+
+volumes:
+  rabbitmq_data:
